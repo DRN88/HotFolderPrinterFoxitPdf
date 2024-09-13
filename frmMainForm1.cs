@@ -96,5 +96,14 @@ namespace HotFolderPrinterFoxitPdf
                 SetVisibleCore(true);
             }
         }
+
+        private void frmMainForm1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = true;
+                Hide();
+            }
+        }
     }
 }

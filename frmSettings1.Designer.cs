@@ -181,7 +181,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(262, 23);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Range: 10s - 1h. App restart required if changed.";
+            this.label2.Text = "Range: 1s - 1h. App restart required if changed.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -202,7 +202,7 @@
             0,
             0});
             this.nudSettingsHotFolderQueueRescanTimeMS.Minimum = new decimal(new int[] {
-            10000,
+            1000,
             0,
             0,
             0});

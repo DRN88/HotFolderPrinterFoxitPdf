@@ -113,6 +113,7 @@
             this.Controls.Add(this.lTimerLastRanAt);
             this.Name = "frmMainForm1";
             this.Text = "HotFolderPrinter";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainForm1_FormClosing);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
