@@ -11,7 +11,17 @@ namespace HotFolderPrinterFoxitPdf
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmMainForm1());
+            using (Mutex mutex = new Mutex(false, "Global\\" + "cf7efcce-b3c6-45ad-af0b-3b505db145dd"))
+            {
+                if (!mutex.WaitOne(0, false))
+                {
+                    //MessageBox.Show("Instance already running");
+                    return;
+                }
+                Application.Run(new frmMainForm1());
+            }
+
+
         }
     }
 }
